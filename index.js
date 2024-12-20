@@ -54,6 +54,7 @@ async function run() {
         const job = await jobsCollection.findOne(jobQuery);
         if(job){
           application.title = job.title;
+          application.location = job.location;
           application.company = job.company;
           application.company_logo = job.company_logo;
         }
